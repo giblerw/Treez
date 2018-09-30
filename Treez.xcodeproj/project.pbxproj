@@ -14,6 +14,7 @@
 		5841EED521602C4F00C2DC86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5841EED321602C4F00C2DC86 /* LaunchScreen.storyboard */; };
 		58967A2B21610AEF00B46673 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58967A2A21610AEF00B46673 /* DroppablePin.swift */; };
 		58967A2D21612D2C00B46673 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58967A2C21612D2C00B46673 /* PhotoCell.swift */; };
+		58DD172C2161638500458167 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD172B2161638500458167 /* Constants.swift */; };
 		68C066858E40D139A697536A /* Pods_Treez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FDB92A6A8959E0412FD141 /* Pods_Treez.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		5841EED621602C4F00C2DC86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58967A2A21610AEF00B46673 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 		58967A2C21612D2C00B46673 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		58DD172B2161638500458167 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A8F6D38170FFDC25F42EA744 /* Pods-Treez.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treez.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Treez/Pods-Treez.debug.xcconfig"; sourceTree = "<group>"; };
 		B94DAE62B0938E4F46AB3232 /* Pods-Treez.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treez.release.xcconfig"; path = "Pods/Target Support Files/Pods-Treez/Pods-Treez.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +115,7 @@
 		5841EEE021602C9500C2DC86 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				58DD172B2161638500458167 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58DD172C2161638500458167 /* Constants.swift in Sources */,
 				58967A2D21612D2C00B46673 /* PhotoCell.swift in Sources */,
 				5841EECD21602C4E00C2DC86 /* MapVC.swift in Sources */,
 				58967A2B21610AEF00B46673 /* DroppablePin.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MapVC.swift
 //  Treez
 //
 //  Created by Weston Gibler on 9/29/18.
@@ -7,14 +7,50 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
 class MapVC: UIViewController {
-
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
+    var locationManager = CLLocationManager()
+    let authorizationStatus = CLLocationManager.authorizationStatus()
+    let regionRadius: Double = 750
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        mapView.delegate = self
+        locationManager.delegate = self
+        configureLocationServices()
     }
 
+    @IBAction func centerMapBtnWasPressed(_ sender: Any) {
+        if authorizationStatus == .authorizedAlways || authorizationStatus == .authorizedWhenInUse {
+            centerMapOnUsersLocation()
+        }
+    }
 
 }
 
+extension MapVC: MKMapViewDelegate {
+    func centerMapOnUsersLocation() {
+        guard let coordinate = locationManager.location?.coordinate else { return };
+        let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+}
+
+extension MapVC: CLLocationManagerDelegate {
+    func configureLocationServices() {
+        if authorizationStatus == .notDetermined {
+            locationManager.requestAlwaysAuthorization()
+        } else {
+            return
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        centerMapOnUsersLocation()
+    }
+}

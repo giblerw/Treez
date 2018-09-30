@@ -25,12 +25,23 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
     var spinner: UIActivityIndicatorView?
     var progressLbl: UILabel?
     
+    var flowLayout = UICollectionViewFlowLayout()
+    var collectionView: UICollectionView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
         locationManager.delegate = self
         configureLocationServices()
         addDoubleTap()
+        
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: flowLayout)
+        collectionView?.register(PhotoCell.self, forCellWithReuseIdentifier: "photoCell")
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
+        collectionView?.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+        
+        pullUpView.addSubview(collectionView!)
     }
 
     func addDoubleTap() {
@@ -65,7 +76,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         spinner?.center = CGPoint(x: screenSize.width / 2 , y: 150)
         spinner?.color = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         spinner?.startAnimating()
-        pullUpView.addSubview(spinner!)
+        collectionView?.addSubview(spinner!)
     }
     
     func removeSpinner() {
@@ -81,7 +92,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         progressLbl?.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         progressLbl?.text = "25/50 Photos Loaded"
         progressLbl?.textAlignment = .center
-        pullUpView.addSubview(progressLbl!)
+        collectionView?.addSubview(progressLbl!)
     }
     
     func removeProgressLabel() {
@@ -145,6 +156,7 @@ extension MapVC: MKMapViewDelegate {
 }
 
 extension MapVC: CLLocationManagerDelegate {
+   
     func configureLocationServices() {
         if authorizationStatus == .notDetermined {
             locationManager.requestAlwaysAuthorization()
@@ -157,3 +169,37 @@ extension MapVC: CLLocationManagerDelegate {
         centerMapOnUsersLocation()
     }
 }
+
+extension MapVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //Number of items in array
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCell
+        return cell!
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

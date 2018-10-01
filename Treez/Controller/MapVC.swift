@@ -96,7 +96,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         progressLbl?.frame = CGRect(x: (screenSize.width / 2) - 120, y: 175, width: 240, height: 40)
         progressLbl?.font = UIFont(name: "Avenir Next", size: 18)
         progressLbl?.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        progressLbl?.text = "0/50 Photos Loaded"
+        progressLbl?.text = "0/40 Photos Loaded"
         progressLbl?.textAlignment = .center
         collectionView?.addSubview(progressLbl!)
     }

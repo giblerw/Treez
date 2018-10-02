@@ -12,8 +12,11 @@
 		5841EED021602C4E00C2DC86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5841EECE21602C4E00C2DC86 /* Main.storyboard */; };
 		5841EED221602C4F00C2DC86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5841EED121602C4F00C2DC86 /* Assets.xcassets */; };
 		5841EED521602C4F00C2DC86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5841EED321602C4F00C2DC86 /* LaunchScreen.storyboard */; };
+		585092C721627BD600638F4E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585092C621627BD600638F4E /* DataService.swift */; };
 		58967A2B21610AEF00B46673 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58967A2A21610AEF00B46673 /* DroppablePin.swift */; };
 		58967A2D21612D2C00B46673 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58967A2C21612D2C00B46673 /* PhotoCell.swift */; };
+		58C8A308216230A6005A0AAF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C8A307216230A6005A0AAF /* LoginVC.swift */; };
+		58C8A30A21624709005A0AAF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58C8A30921624709005A0AAF /* GoogleService-Info.plist */; };
 		58DD172C2161638500458167 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD172B2161638500458167 /* Constants.swift */; };
 		58DD172E216193BA00458167 /* PopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD172D216193BA00458167 /* PopVC.swift */; };
 		68C066858E40D139A697536A /* Pods_Treez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FDB92A6A8959E0412FD141 /* Pods_Treez.framework */; };
@@ -28,8 +31,11 @@
 		5841EED121602C4F00C2DC86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5841EED421602C4F00C2DC86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5841EED621602C4F00C2DC86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		585092C621627BD600638F4E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		58967A2A21610AEF00B46673 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 		58967A2C21612D2C00B46673 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		58C8A307216230A6005A0AAF /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		58C8A30921624709005A0AAF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		58DD172B2161638500458167 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		58DD172D216193BA00458167 /* PopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopVC.swift; sourceTree = "<group>"; };
 		A8F6D38170FFDC25F42EA744 /* Pods-Treez.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treez.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Treez/Pods-Treez.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 				5841EED121602C4F00C2DC86 /* Assets.xcassets */,
 				5841EED321602C4F00C2DC86 /* LaunchScreen.storyboard */,
 				5841EED621602C4F00C2DC86 /* Info.plist */,
+				58C8A30921624709005A0AAF /* GoogleService-Info.plist */,
 			);
 			path = Treez;
 			sourceTree = "<group>";
@@ -95,6 +102,7 @@
 			children = (
 				5841EECC21602C4E00C2DC86 /* MapVC.swift */,
 				58DD172D216193BA00458167 /* PopVC.swift */,
+				58C8A307216230A6005A0AAF /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				58DD172B2161638500458167 /* Constants.swift */,
+				585092C621627BD600638F4E /* DataService.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5841EED521602C4F00C2DC86 /* LaunchScreen.storyboard in Resources */,
+				58C8A30A21624709005A0AAF /* GoogleService-Info.plist in Resources */,
 				5841EED221602C4F00C2DC86 /* Assets.xcassets in Resources */,
 				5841EED021602C4E00C2DC86 /* Main.storyboard in Resources */,
 			);
@@ -212,6 +222,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Treez/Pods-Treez-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -219,6 +234,11 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -256,10 +276,12 @@
 			files = (
 				58DD172E216193BA00458167 /* PopVC.swift in Sources */,
 				58DD172C2161638500458167 /* Constants.swift in Sources */,
+				58C8A308216230A6005A0AAF /* LoginVC.swift in Sources */,
 				58967A2D21612D2C00B46673 /* PhotoCell.swift in Sources */,
 				5841EECD21602C4E00C2DC86 /* MapVC.swift in Sources */,
 				58967A2B21610AEF00B46673 /* DroppablePin.swift in Sources */,
 				5841EECB21602C4E00C2DC86 /* AppDelegate.swift in Sources */,
+				585092C721627BD600638F4E /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

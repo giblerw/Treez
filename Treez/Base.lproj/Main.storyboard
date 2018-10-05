@@ -61,18 +61,12 @@
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VT3-mW-7Yp">
-                                <rect key="frame" x="25" y="238" width="48" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="SX8-Zy-aqR"/>
-                                </constraints>
+                                <rect key="frame" x="25" y="238" width="50" height="24"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbA-lB-BW6">
                                 <rect key="frame" x="25" y="320" width="78" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="78" id="aUp-Ma-2bz"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -95,7 +89,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="switchLoginMode:" destination="i4W-SC-Mom" eventType="touchUpInside" id="Deh-P5-6eV"/>
+                                    <action selector="RegisterClicked:" destination="i4W-SC-Mom" eventType="touchUpInside" id="Aij-U8-dmn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PpY-rE-9Xs">
@@ -109,7 +103,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="signupOrLogin:" destination="i4W-SC-Mom" eventType="touchUpInside" id="dmb-TA-a7H"/>
+                                    <action selector="LoginClicked:" destination="i4W-SC-Mom" eventType="touchUpInside" id="MTP-sI-pSa"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="doQ-if-VmC"/>
                                 </connections>
                             </button>
@@ -134,8 +128,10 @@
                             <constraint firstItem="rRT-m9-ilI" firstAttribute="top" secondItem="PpY-rE-9Xs" secondAttribute="bottom" constant="58" id="X3Z-Rg-ZaF"/>
                             <constraint firstItem="c6f-Zj-ocK" firstAttribute="trailing" secondItem="Mr6-VT-3oc" secondAttribute="trailing" constant="191" id="ZzN-2z-zvJ"/>
                             <constraint firstItem="VT3-mW-7Yp" firstAttribute="top" secondItem="jdl-gv-s0l" secondAttribute="bottom" constant="28" id="a22-CA-Ze9"/>
+                            <constraint firstItem="c6f-Zj-ocK" firstAttribute="trailing" secondItem="DbA-lB-BW6" secondAttribute="trailing" constant="272" id="aT4-Gl-75W"/>
                             <constraint firstItem="c6f-Zj-ocK" firstAttribute="trailing" secondItem="rRT-m9-ilI" secondAttribute="trailing" id="al7-aH-5oo"/>
                             <constraint firstItem="VT3-mW-7Yp" firstAttribute="leading" secondItem="c6f-Zj-ocK" secondAttribute="leading" constant="25" id="bGU-Xz-0N3"/>
+                            <constraint firstItem="c6f-Zj-ocK" firstAttribute="trailing" secondItem="VT3-mW-7Yp" secondAttribute="trailing" constant="300" id="cRJ-aX-JfN"/>
                             <constraint firstItem="3go-c2-O5o" firstAttribute="top" secondItem="PpY-rE-9Xs" secondAttribute="bottom" constant="39" id="evk-6I-CxD"/>
                             <constraint firstItem="9RB-Xj-aZk" firstAttribute="leading" secondItem="c6f-Zj-ocK" secondAttribute="leading" id="fUy-e3-OZ7"/>
                             <constraint firstItem="c6f-Zj-ocK" firstAttribute="trailing" secondItem="jdl-gv-s0l" secondAttribute="trailing" constant="191" id="lJJ-gO-Tce"/>
@@ -155,10 +151,10 @@
                         <viewLayoutGuide key="safeArea" id="c6f-Zj-ocK"/>
                     </view>
                     <connections>
+                        <outlet property="LoginButton" destination="PpY-rE-9Xs" id="i2g-Vl-bcI"/>
+                        <outlet property="RegisterButton" destination="rRT-m9-ilI" id="GG5-Ke-NxT"/>
                         <outlet property="email" destination="5tH-l8-H6z" id="wrA-mo-IT2"/>
                         <outlet property="password" destination="d7D-cm-ifN" id="1gt-BE-z5I"/>
-                        <outlet property="signupOrLoginButton" destination="PpY-rE-9Xs" id="QWk-DU-BWO"/>
-                        <outlet property="switchLoginModeButton" destination="rRT-m9-ilI" id="Kb5-qK-0EB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C18-nA-1BQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -193,7 +189,6 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="DQY-JQ-afu" secondAttribute="bottom" constant="18" id="LVf-eQ-xwW"/>
                                     <constraint firstAttribute="trailing" secondItem="DQY-JQ-afu" secondAttribute="trailing" id="VH4-Mv-pnm"/>
-                                    <constraint firstItem="DQY-JQ-afu" firstAttribute="centerX" secondItem="bRz-bg-9wH" secondAttribute="centerX" id="XZ9-ji-wHw"/>
                                     <constraint firstItem="DQY-JQ-afu" firstAttribute="leading" secondItem="bRz-bg-9wH" secondAttribute="leading" id="ctL-jn-hf8"/>
                                     <constraint firstAttribute="height" constant="100" id="e3N-C6-ZBK"/>
                                 </constraints>
@@ -211,9 +206,49 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQh-d7-IhS">
                                 <rect key="frame" x="0.0" y="811" width="375" height="1"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Would you like to mark this tree, as remarkable?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUN-Xf-2vM">
+                                        <rect key="frame" x="39" y="8" width="296" height="65.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4n-u0-RE2">
+                                        <rect key="frame" x="100" y="203" width="175" height="37"/>
+                                        <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelSubmitTreeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qZb-W5-wTw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDU-4a-Ly2">
+                                        <rect key="frame" x="100" y="132" width="175" height="37"/>
+                                        <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                        <state key="normal" title="Absolutlely!">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="confirmSubmitTreeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7wi-KK-vnX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="TDU-4a-Ly2" firstAttribute="top" secondItem="cUN-Xf-2vM" secondAttribute="bottom" constant="58.333333333333329" id="3Vi-ik-FPS"/>
                                     <constraint firstAttribute="height" constant="1" id="5n2-iV-raw"/>
+                                    <constraint firstItem="o4n-u0-RE2" firstAttribute="leading" secondItem="sQh-d7-IhS" secondAttribute="leading" constant="100" id="HQh-Uu-79W"/>
+                                    <constraint firstItem="cUN-Xf-2vM" firstAttribute="top" secondItem="sQh-d7-IhS" secondAttribute="top" constant="8" id="KLx-TD-iAQ"/>
+                                    <constraint firstItem="o4n-u0-RE2" firstAttribute="top" secondItem="TDU-4a-Ly2" secondAttribute="bottom" constant="34" id="NBl-yD-iYS"/>
+                                    <constraint firstAttribute="trailing" secondItem="cUN-Xf-2vM" secondAttribute="trailing" constant="40" id="O8v-IP-V5t"/>
+                                    <constraint firstItem="cUN-Xf-2vM" firstAttribute="leading" secondItem="sQh-d7-IhS" secondAttribute="leading" constant="39" id="ZWR-ft-vF8"/>
+                                    <constraint firstAttribute="trailing" secondItem="o4n-u0-RE2" secondAttribute="trailing" constant="100" id="g1a-BV-13p"/>
+                                    <constraint firstItem="cUN-Xf-2vM" firstAttribute="top" secondItem="sQh-d7-IhS" secondAttribute="top" constant="8" id="r4P-8d-ohj"/>
+                                    <constraint firstAttribute="trailing" secondItem="TDU-4a-Ly2" secondAttribute="trailing" constant="100" id="rxf-g1-ib5"/>
+                                    <constraint firstItem="TDU-4a-Ly2" firstAttribute="leading" secondItem="sQh-d7-IhS" secondAttribute="leading" constant="100" id="ygC-dR-8Rx"/>
                                 </constraints>
                             </view>
                         </subviews>

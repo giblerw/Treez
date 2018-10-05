@@ -30,6 +30,7 @@
 		580C403B2167928D00DBB1DB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		580C403D216792B700DBB1DB /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		580C403F216795C400DBB1DB /* OnlineUsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineUsersVC.swift; sourceTree = "<group>"; };
+		580C40432167AEF000DBB1DB /* Treez.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Treez.entitlements; sourceTree = "<group>"; };
 		5841EEC721602C4E00C2DC86 /* Treez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Treez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5841EECA21602C4E00C2DC86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5841EECC21602C4E00C2DC86 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 		5841EEC921602C4E00C2DC86 /* Treez */ = {
 			isa = PBXGroup;
 			children = (
+				580C40432167AEF000DBB1DB /* Treez.entitlements */,
 				580C403A2167927800DBB1DB /* Models */,
 				5841EEE021602C9500C2DC86 /* Utilities */,
 				5841EEDE21602C8100C2DC86 /* View */,
@@ -184,6 +186,11 @@
 				TargetAttributes = {
 					5841EEC621602C4E00C2DC86 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -440,6 +447,7 @@
 			baseConfigurationReference = A8F6D38170FFDC25F42EA744 /* Pods-Treez.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Treez/Treez.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RP6FSYN5B5;
 				INFOPLIST_FILE = Treez/Info.plist;
@@ -459,6 +467,7 @@
 			baseConfigurationReference = B94DAE62B0938E4F46AB3232 /* Pods-Treez.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Treez/Treez.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RP6FSYN5B5;
 				INFOPLIST_FILE = Treez/Info.plist;

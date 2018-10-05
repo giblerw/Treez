@@ -11,17 +11,22 @@ import MapKit
 import CoreLocation
 import Alamofire
 import AlamofireImage
+import Firebase
 
 class MapVC: UIViewController, UIGestureRecognizerDelegate {
-    
+    // MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var pullUpViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var pullUpView: UIView!
     
-    var locationManager = CLLocationManager()
+    // MARK: Constatnts
+    let ref = Database.database().reference(withPath: "tree-list")
+    let usersRef = Database.database().reference(withPath: "online")
     let authorizationStatus = CLLocationManager.authorizationStatus()
     let regionRadius: Double = 750 * 2
     
+     // MARK: Properties
+    var locationManager = CLLocationManager()
     var screenSize = UIScreen.main.bounds
     
     var spinner: UIActivityIndicatorView?
@@ -32,6 +37,12 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
     
     var imageUrlArray = [String]()
     var imageArray = [UIImage]()
+   
+    var items: [Tree] = []
+    var user: User!
+    var userCountBarButtonItem: UIBarButtonItem!
+    
+    // MARK: VC Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,6 +118,10 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     
+    func addLocalTreeAnnotations() {
+        
+    }
+    
     @IBAction func centerMapBtnWasPressed(_ sender: Any) {
         if authorizationStatus == .authorizedAlways || authorizationStatus == .authorizedWhenInUse {
             centerMapOnUsersLocation()
@@ -134,7 +149,7 @@ extension MapVC: MKMapViewDelegate {
     }
     
     @objc func dropPin(sender: UITapGestureRecognizer) {
-        removePin()
+//        removePin()
         removeSpinner()
         removeProgressLabel()
         cancelAllSessions()

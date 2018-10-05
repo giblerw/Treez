@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		580C403C2167928D00DBB1DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C403B2167928D00DBB1DB /* User.swift */; };
+		580C403E216792B700DBB1DB /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C403D216792B700DBB1DB /* Tree.swift */; };
+		580C4040216795C400DBB1DB /* OnlineUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C403F216795C400DBB1DB /* OnlineUsersVC.swift */; };
 		5841EECB21602C4E00C2DC86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5841EECA21602C4E00C2DC86 /* AppDelegate.swift */; };
 		5841EECD21602C4E00C2DC86 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5841EECC21602C4E00C2DC86 /* MapVC.swift */; };
 		5841EED021602C4E00C2DC86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5841EECE21602C4E00C2DC86 /* Main.storyboard */; };
@@ -24,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		52FDB92A6A8959E0412FD141 /* Pods_Treez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		580C403B2167928D00DBB1DB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		580C403D216792B700DBB1DB /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		580C403F216795C400DBB1DB /* OnlineUsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineUsersVC.swift; sourceTree = "<group>"; };
 		5841EEC721602C4E00C2DC86 /* Treez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Treez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5841EECA21602C4E00C2DC86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5841EECC21602C4E00C2DC86 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -62,6 +68,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		580C403A2167927800DBB1DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				580C403B2167928D00DBB1DB /* User.swift */,
+				580C403D216792B700DBB1DB /* Tree.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5841EEBE21602C4E00C2DC86 = {
 			isa = PBXGroup;
 			children = (
@@ -83,8 +98,8 @@
 		5841EEC921602C4E00C2DC86 /* Treez */ = {
 			isa = PBXGroup;
 			children = (
+				580C403A2167927800DBB1DB /* Models */,
 				5841EEE021602C9500C2DC86 /* Utilities */,
-				5841EEDF21602C8C00C2DC86 /* Extensions */,
 				5841EEDE21602C8100C2DC86 /* View */,
 				5841EEDC21602C6500C2DC86 /* Controller */,
 				5841EECA21602C4E00C2DC86 /* AppDelegate.swift */,
@@ -103,6 +118,7 @@
 				5841EECC21602C4E00C2DC86 /* MapVC.swift */,
 				58DD172D216193BA00458167 /* PopVC.swift */,
 				58C8A307216230A6005A0AAF /* LoginVC.swift */,
+				580C403F216795C400DBB1DB /* OnlineUsersVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -114,13 +130,6 @@
 				58967A2C21612D2C00B46673 /* PhotoCell.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		5841EEDF21602C8C00C2DC86 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		5841EEE021602C9500C2DC86 /* Utilities */ = {
@@ -277,8 +286,11 @@
 				58DD172E216193BA00458167 /* PopVC.swift in Sources */,
 				58DD172C2161638500458167 /* Constants.swift in Sources */,
 				58C8A308216230A6005A0AAF /* LoginVC.swift in Sources */,
+				580C4040216795C400DBB1DB /* OnlineUsersVC.swift in Sources */,
 				58967A2D21612D2C00B46673 /* PhotoCell.swift in Sources */,
 				5841EECD21602C4E00C2DC86 /* MapVC.swift in Sources */,
+				580C403E216792B700DBB1DB /* Tree.swift in Sources */,
+				580C403C2167928D00DBB1DB /* User.swift in Sources */,
 				58967A2B21610AEF00B46673 /* DroppablePin.swift in Sources */,
 				5841EECB21602C4E00C2DC86 /* AppDelegate.swift in Sources */,
 				585092C721627BD600638F4E /* DataService.swift in Sources */,

@@ -13,10 +13,19 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    override init() {
+        FirebaseApp.configure()
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-       FirebaseApp.configure()
+        if Auth.auth().currentUser == nil {
+            print("no user")
+            let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginVC")
+            window?.makeKeyAndVisible()
+            window?.rootViewController?.present(loginVC, animated: true, completion: nil)
+        }
         return true
     }
 

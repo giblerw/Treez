@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginVC: UIViewController {
 
@@ -14,46 +15,40 @@ class LoginVC: UIViewController {
 //Login text fields
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
-//Signup button
-    @IBAction func signupOrLogin(_ sender: Any) {
-        if email.text == "" || password.text == "" {
-            let alert = UIAlertController(title: "Error in form input", message: "Please enter a valid email & password", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                self.dismiss(animated: true, completion: nil)
-            }))
-            self.present(alert, animated: true, completion: nil)
-        } else {
-            print("Signing up...")
-        }
-    
-    }
 
-    @IBOutlet weak var signupOrLoginButton: UIButton!
-    
-//Login button
-    @IBAction func switchLoginMode(_ sender: Any) {
-        //First, findout which signup mode we are in
-        if (signupModeActive) {
-            //Change things from signupMode to loginMode
-            signupModeActive = false
-            signupOrLoginButton.setTitle("Sign me up!", for: [])
-            switchLoginModeButton.setTitle("Remembered your Login?...", for: [])
-        } else {
-            //Change things from loginMode to  signupMode
-            signupModeActive = true
-            signupOrLoginButton.setTitle("Log me in!", for: [])
-            switchLoginModeButton.setTitle("Nevermind, sign me up.", for: [])
-        }
-    }
-    
-    @IBOutlet weak var switchLoginModeButton: UIButton!
-    
+    @IBOutlet weak var LoginButton: UIButton!
+    @IBOutlet weak var RegisterButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if  Auth.auth().currentUser != nil {
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func LoginClicked(_ sender: Any) {
+        if email.text == "" || password.text == "" {
+            let errorAlert = UIAlertController(title: "Missing Required Input", message: "Please enter your email address and password, or click below to signup with new account", preferredStyle: .actionSheet)
+            let errorAlertAction = UIAlertAction(title: "Try Again", style: .default, handler: nil)
+            errorAlert.addAction(errorAlertAction)
+            present(errorAlert, animated: true, completion: nil)
+        } else {
+            Auth.auth().signIn(withEmail: self.email.text!,
+                               password: self.password.text!)
+            let loginSuccessful = storyboard?.instantiateViewController(withIdentifier: "HomeTabController") 
+            present(loginSuccessful!, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func RegisterClicked(_ sender: Any) {
+        let registerVc = storyboard?.instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC
+        present(registerVc!, animated: true, completion: nil)
+    }
 
 }
 

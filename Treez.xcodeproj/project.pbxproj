@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		580B68E4217B1B95003FF81E /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580B68E3217B1B95003FF81E /* UIViewExt.swift */; };
+		580B68E6217B1D69003FF81E /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580B68E5217B1D69003FF81E /* RegisterVC.swift */; };
 		580C403C2167928D00DBB1DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C403B2167928D00DBB1DB /* User.swift */; };
 		580C403E216792B700DBB1DB /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C403D216792B700DBB1DB /* Tree.swift */; };
 		580C4040216795C400DBB1DB /* OnlineUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C403F216795C400DBB1DB /* OnlineUsersVC.swift */; };
@@ -16,6 +18,10 @@
 		5841EED221602C4F00C2DC86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5841EED121602C4F00C2DC86 /* Assets.xcassets */; };
 		5841EED521602C4F00C2DC86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5841EED321602C4F00C2DC86 /* LaunchScreen.storyboard */; };
 		585092C721627BD600638F4E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585092C621627BD600638F4E /* DataService.swift */; };
+		585EF757217BA653005565B5 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585EF756217BA653005565B5 /* AuthService.swift */; };
+		585EF759217BA8BF005565B5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585EF758217BA8BF005565B5 /* Message.swift */; };
+		585EF75B217BB3AA005565B5 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585EF75A217BB3AA005565B5 /* ProfileVC.swift */; };
+		585EF75D217BB3E6005565B5 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585EF75C217BB3E6005565B5 /* ChatVC.swift */; };
 		58967A2B21610AEF00B46673 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58967A2A21610AEF00B46673 /* DroppablePin.swift */; };
 		58967A2D21612D2C00B46673 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58967A2C21612D2C00B46673 /* PhotoCell.swift */; };
 		58C8A308216230A6005A0AAF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C8A307216230A6005A0AAF /* LoginVC.swift */; };
@@ -27,9 +33,12 @@
 
 /* Begin PBXFileReference section */
 		52FDB92A6A8959E0412FD141 /* Pods_Treez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		580B68E3217B1B95003FF81E /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		580B68E5217B1D69003FF81E /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		580C403B2167928D00DBB1DB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		580C403D216792B700DBB1DB /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		580C403F216795C400DBB1DB /* OnlineUsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineUsersVC.swift; sourceTree = "<group>"; };
+		580C40432167AEF000DBB1DB /* Treez.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Treez.entitlements; sourceTree = "<group>"; };
 		5841EEC721602C4E00C2DC86 /* Treez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Treez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5841EECA21602C4E00C2DC86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5841EECC21602C4E00C2DC86 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -38,6 +47,10 @@
 		5841EED421602C4F00C2DC86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5841EED621602C4F00C2DC86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		585092C621627BD600638F4E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		585EF756217BA653005565B5 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		585EF758217BA8BF005565B5 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		585EF75A217BB3AA005565B5 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		585EF75C217BB3E6005565B5 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		58967A2A21610AEF00B46673 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 		58967A2C21612D2C00B46673 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		58C8A307216230A6005A0AAF /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -68,11 +81,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		580B68E0217B1B3E003FF81E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				580B68E3217B1B95003FF81E /* UIViewExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		580C403A2167927800DBB1DB /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				580C403B2167928D00DBB1DB /* User.swift */,
 				580C403D216792B700DBB1DB /* Tree.swift */,
+				585EF758217BA8BF005565B5 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -98,6 +120,8 @@
 		5841EEC921602C4E00C2DC86 /* Treez */ = {
 			isa = PBXGroup;
 			children = (
+				580B68E0217B1B3E003FF81E /* Extensions */,
+				580C40432167AEF000DBB1DB /* Treez.entitlements */,
 				580C403A2167927800DBB1DB /* Models */,
 				5841EEE021602C9500C2DC86 /* Utilities */,
 				5841EEDE21602C8100C2DC86 /* View */,
@@ -119,6 +143,9 @@
 				58DD172D216193BA00458167 /* PopVC.swift */,
 				58C8A307216230A6005A0AAF /* LoginVC.swift */,
 				580C403F216795C400DBB1DB /* OnlineUsersVC.swift */,
+				580B68E5217B1D69003FF81E /* RegisterVC.swift */,
+				585EF75A217BB3AA005565B5 /* ProfileVC.swift */,
+				585EF75C217BB3E6005565B5 /* ChatVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -137,6 +164,7 @@
 			children = (
 				58DD172B2161638500458167 /* Constants.swift */,
 				585092C621627BD600638F4E /* DataService.swift */,
+				585EF756217BA653005565B5 /* AuthService.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -184,6 +212,11 @@
 				TargetAttributes = {
 					5841EEC621602C4E00C2DC86 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -283,17 +316,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				580B68E4217B1B95003FF81E /* UIViewExt.swift in Sources */,
 				58DD172E216193BA00458167 /* PopVC.swift in Sources */,
 				58DD172C2161638500458167 /* Constants.swift in Sources */,
 				58C8A308216230A6005A0AAF /* LoginVC.swift in Sources */,
+				585EF75B217BB3AA005565B5 /* ProfileVC.swift in Sources */,
 				580C4040216795C400DBB1DB /* OnlineUsersVC.swift in Sources */,
 				58967A2D21612D2C00B46673 /* PhotoCell.swift in Sources */,
+				585EF75D217BB3E6005565B5 /* ChatVC.swift in Sources */,
 				5841EECD21602C4E00C2DC86 /* MapVC.swift in Sources */,
 				580C403E216792B700DBB1DB /* Tree.swift in Sources */,
 				580C403C2167928D00DBB1DB /* User.swift in Sources */,
 				58967A2B21610AEF00B46673 /* DroppablePin.swift in Sources */,
 				5841EECB21602C4E00C2DC86 /* AppDelegate.swift in Sources */,
 				585092C721627BD600638F4E /* DataService.swift in Sources */,
+				585EF759217BA8BF005565B5 /* Message.swift in Sources */,
+				580B68E6217B1D69003FF81E /* RegisterVC.swift in Sources */,
+				585EF757217BA653005565B5 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +479,7 @@
 			baseConfigurationReference = A8F6D38170FFDC25F42EA744 /* Pods-Treez.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Treez/Treez.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RP6FSYN5B5;
 				INFOPLIST_FILE = Treez/Info.plist;
@@ -459,6 +499,7 @@
 			baseConfigurationReference = B94DAE62B0938E4F46AB3232 /* Pods-Treez.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Treez/Treez.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RP6FSYN5B5;
 				INFOPLIST_FILE = Treez/Info.plist;

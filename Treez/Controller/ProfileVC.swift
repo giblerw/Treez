@@ -17,8 +17,9 @@ class ProfileVC: UIViewController {
     }
 
     @IBAction func logoutButtonPressed(_ sender: Any) {
-        let logoutPopup = UIAlertController(title: "Logout?", message: "Are you sure you want to logout?", preferredStyle: .actionSheet)
-        let logoutAction = UIAlertAction(title: "Logout?", style: .destructive) { (buttonTapped) in
+        let logoutPopup = UIAlertController(title: "Confirm:", message: "Do you really want to logout?", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        let logoutAction = UIAlertAction(title: "Indubitably", style: .cancel) { (buttonTapped) in
             do {
                 try Auth.auth().signOut()
                 let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
@@ -28,6 +29,7 @@ class ProfileVC: UIViewController {
             }
         }
         logoutPopup.addAction(logoutAction)
+        logoutPopup.addAction(cancelAction)
         present(logoutPopup, animated: true, completion: nil)
     }
 }
